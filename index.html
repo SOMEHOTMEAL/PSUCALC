@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Supply Wattage Calculator</title>
+    <script src="psu_calculator.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<link rel="stylesheet" href="styles.css">
+<body>
+    <h1>Power Supply Wattage Calculator</h1>
+
+    <!-- CPU TDP Input -->
+    <label for="cpu-tdp">Enter CPU TDP (W):</label>
+    <input type="number" id="cpu-tdp" placeholder="e.g., 125">
+    <br>
+
+    <!-- GPU 1 TDP Input -->
+    <label for="gpu1-tdp">Enter 1st GPU TDP (W):</label>
+    <input type="number" id="gpu1-tdp" placeholder="e.g., 320">
+    <br>
+
+    <!-- GPU 2 TDP Input -->
+    <label for="gpu2-tdp">Enter 2nd GPU TDP (W) (Optional):</label>
+    <input type="number" id="gpu2-tdp" placeholder="e.g., 320">
+    <br>
+
+    <!-- System Components -->
+    <label for="ram-sticks">Number of RAM Sticks:</label>
+    <input type="number" id="ram-sticks" placeholder="e.g., 2">
+    <br>
+
+    <label for="storage-drives">Number of Storage Drives (HDD/SSD):</label>
+    <input type="number" id="storage-drives" placeholder="e.g., 2">
+    <br>
+
+    <label for="case-fans">Number of Case Fans:</label>
+    <input type="number" id="case-fans" placeholder="e.g., 3">
+    <br>
+
+    <label for="aio">AIO Liquid Cooler? (Yes = 1, No = 0):</label>
+    <input type="number" id="aio" placeholder="0 or 1">
+    <br>
+
+    <!-- Calculate Button -->
+    <button onclick="calculatePSU()">Calculate PSU Wattage</button>
+    <p id="result">Recommended PSU Wattage: - W</p>
+    <p id="psu-suggestion">Suggested PSU: -</p>
+
+    <hr>
+
+    <!-- PSU Efficiency Calculator -->
+    <h2>PSU Efficiency Calculator</h2>
+    <label for="psu-wattage">Enter PSU Wattage (W):</label>
+    <input type="number" id="psu-wattage" placeholder="e.g., 750">
+    <br>
+
+    <label for="psu-efficiency">Select Efficiency Rating:</label>
+    <select id="psu-efficiency">
+        <option value="0.80">80+ White (80%)</option>
+        <option value="0.82">80+ Bronze (82%)</option>
+        <option value="0.85">80+ Silver (85%)</option>
+        <option value="0.87">80+ Gold (87%)</option>
+        <option value="0.90">80+ Platinum (90%)</option>
+        <option value="0.94">80+ Titanium (94%)</option>
+    </select>
+    <br>
+
+    <button onclick="calculatePSUEfficiency()">Calculate PSU Efficiency</button>
+    <p id="efficiency-result">Approx. Peak Wattage: - W</p>
+
+    <hr>
+
+    <!-- TechPowerUp Links -->
+    <button onclick="window.open('https://www.techpowerup.com/cpu-specs/', '_blank')">CPU Specs</button>
+    <button onclick="window.open('https://www.techpowerup.com/gpu-specs/', '_blank')">GPU Specs</button>
+<hr>
+<br>
+<br>
+<br>
+<button onclick="toggleMode()">Toggle Light Mode</button>
+</body>
+</html>
