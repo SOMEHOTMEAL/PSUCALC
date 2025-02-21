@@ -1,0 +1,37 @@
+body {
+  font-family: fantasy;
+  font-weight: 300; /* Lighter weight */
+  letter-spacing:2px; /* Adds spacing to make it less compact */
+  background: linear-gradient(to left, #2c3e50, #4ca1af);
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Headings */
+h1, h2 {
+  color: #111;
+}
+
+/* Button Styling */
+button {
+  background-color: #00051582;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.25;
+}
+
+/* Light Mode */
+.light-mode {
+  background: linear-gradient(to right, #ff7cd1, #ffffff); /* pastel pink  → white */
+  color: black;
+}
